@@ -1,4 +1,4 @@
-package com.lockgenius.passwordGenerator.service;
+package com.lockgenius.passwordGenerator.password.service;
 
 import org.springframework.stereotype.Service;
 
