@@ -22,7 +22,7 @@ public class PasswordController {
 
     @GetMapping("/generatePassword")
     public Password generatePassword() {
-        String passwordStr = passwordService.generateRandomPassword(10); // Générer un mot de passe de longueur 10
+        String passwordStr = passwordService.generateRandomPassword(12);
         return new Password(passwordStr);
     }
 }
