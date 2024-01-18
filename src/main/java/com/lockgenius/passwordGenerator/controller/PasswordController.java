@@ -1,8 +1,9 @@
 package com.lockgenius.passwordGenerator.controller;
 
-import com.lockgenius.passwordGenerator.password.service.PasswordService;
+
 import com.lockgenius.passwordGenerator.model.Password;
 
+import com.lockgenius.passwordGenerator.service.PasswordService;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import org.springframework.web.bind.annotation.CrossOrigin;
@@ -17,7 +18,6 @@ public class PasswordController {
 
     private final PasswordService passwordService;
 
-// Injection de dependance
     @Autowired
     public PasswordController(PasswordService passwordService) {
         this.passwordService = passwordService;

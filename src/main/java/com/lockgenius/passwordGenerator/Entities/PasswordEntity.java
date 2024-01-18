@@ -4,7 +4,7 @@ import java.time.LocalDateTime;
 
 @Entity
 @Table(name = "passwords")
-public class Password {
+public class PasswordEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -13,7 +13,7 @@ public class Password {
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "user_id", nullable = false)
-    private User user;
+    private UserEntity user;
 
     private String name;
 

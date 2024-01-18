@@ -1,10 +1,13 @@
-package com.lockgenius.passwordGenerator.password.service;
+package com.lockgenius.passwordGenerator.service;
+
 
 import org.springframework.stereotype.Service;
 
 import java.security.SecureRandom;
 @Service
 public class PasswordService {
+
+
     private static final String CHARACTERS = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*()";
 
     public String generateRandomPassword(int length) {
