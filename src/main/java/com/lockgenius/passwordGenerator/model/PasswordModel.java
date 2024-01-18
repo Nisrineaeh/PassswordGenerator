@@ -1,9 +1,9 @@
 package com.lockgenius.passwordGenerator.model;
 
-public class Password {
+public class PasswordModel {
     private String value;
 
-    public Password(String value) {
+    public PasswordModel(String value) {
         this.value = value;
     }
 

@@ -1,8 +1,7 @@
 package com.lockgenius.passwordGenerator.controller;
 
 
-import com.lockgenius.passwordGenerator.model.Password;
-
+import com.lockgenius.passwordGenerator.model.PasswordModel;
 import com.lockgenius.passwordGenerator.service.PasswordService;
 import org.springframework.beans.factory.annotation.Autowired;
 
@@ -24,8 +23,8 @@ public class PasswordController {
     }
 
     @GetMapping("/generatePassword")
-    public Password generatePassword() {
+    public PasswordModel generatePassword() {
         String passwordStr = passwordService.generateRandomPassword(12);
-        return new Password(passwordStr);
+        return new PasswordModel(passwordStr);
     }
 }

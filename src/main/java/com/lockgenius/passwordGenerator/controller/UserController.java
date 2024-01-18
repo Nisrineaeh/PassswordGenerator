@@ -5,6 +5,8 @@ import com.lockgenius.passwordGenerator.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+import com.lockgenius.passwordGenerator.Repositories.UserRepository;
+
 
 @CrossOrigin(origins = "http://localhost:4200")
 @RestController
@@ -23,5 +25,23 @@ public class UserController {
             return ResponseEntity.ok(registeredUser);
 
     }
+
+    @Autowired
+    private UserService userService;
+
+    @Autowired
+    private UserRepository userRepository;
+
+
+
+   /** public String login(String username, String password) {
+        User user = userRepository.findByUsername(username);
+        if (user != null && userService.checkPassword(password, user.getPassword())) {
+            // L'utilisateur est authentifié
+        } else {
+            // Échec de l'authentification
+        }
+        return username;
+    }**/
 
 }
