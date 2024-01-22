@@ -28,9 +28,7 @@ public class UserEntity {
     public void User() {
     }
 
-    // Ajoutez d'autres constructeurs si nécessaire
 
-    // Getters et setters
     public Long getUserId() {
         return userId;
     }
@@ -63,5 +61,5 @@ public class UserEntity {
         this.passwordHash = passwordHash;
     }
 
-    // Méthodes supplémentaires si nécessaire
+
 }

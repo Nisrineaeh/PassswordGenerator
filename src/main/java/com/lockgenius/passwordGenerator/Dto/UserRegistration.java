@@ -6,9 +6,6 @@ public class UserRegistration {
     private String email;
     private String password;
 
-    // Constructeur par défaut (si nécessaire)
-    public UserRegistration() {
-    }
 
     // Constructeur avec paramètres (si nécessaire)
     public UserRegistration(String username, String email, String password) {
