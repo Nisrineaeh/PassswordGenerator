@@ -3,8 +3,6 @@ package com.lockgenius.passwordGenerator.service;
 import com.lockgenius.passwordGenerator.Entities.UserEntity;
 import com.lockgenius.passwordGenerator.Repositories.UserRepository;
 import com.lockgenius.passwordGenerator.Utils.PasswordEncoder;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.security.core.userdetails.User;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
@@ -14,8 +12,12 @@ import java.util.ArrayList;
 
 @Service
 public class UserService implements UserDetailsService {
-    @Autowired
-    private UserRepository userRepository;
+
+    private final UserRepository userRepository;
+
+    public UserService(UserRepository userRepository) {
+        this.userRepository = userRepository;
+    }
 
     public UserEntity createUser(UserEntity user) {
         String hashedPassword = PasswordEncoder.hashPassword(user.getPasswordHash());

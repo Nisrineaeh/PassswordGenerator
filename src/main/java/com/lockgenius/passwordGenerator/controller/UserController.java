@@ -1,9 +1,7 @@
 package com.lockgenius.passwordGenerator.controller;
 
 import com.lockgenius.passwordGenerator.Entities.UserEntity;
-import com.lockgenius.passwordGenerator.Utils.JWT;
 import com.lockgenius.passwordGenerator.service.UserService;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import com.lockgenius.passwordGenerator.Repositories.UserRepository;
@@ -16,11 +14,14 @@ import java.util.List;
 public class UserController {
 
 
-    @Autowired
-    private UserService UserService;
 
-    @Autowired
-    private UserRepository userRepository;
+    private final UserService UserService;
+    private final UserRepository userRepository;
+
+    public UserController(com.lockgenius.passwordGenerator.service.UserService userService, UserRepository userRepository) {
+        UserService = userService;
+        this.userRepository = userRepository;
+    }
 
 
     @PostMapping("/auth/register")

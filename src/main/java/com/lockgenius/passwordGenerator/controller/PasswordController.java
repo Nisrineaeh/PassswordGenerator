@@ -17,14 +17,14 @@ public class PasswordController {
 
     private final PasswordService passwordService;
 
-    @Autowired
+
     public PasswordController(PasswordService passwordService) {
         this.passwordService = passwordService;
     }
 
     @GetMapping("/generatePassword")
     public PasswordModel generatePassword() {
-        String passwordStr = passwordService.generateRandomPassword(12);
+        String passwordStr = passwordService.generateRandomPassword(64);
         return new PasswordModel(passwordStr);
     }
 }

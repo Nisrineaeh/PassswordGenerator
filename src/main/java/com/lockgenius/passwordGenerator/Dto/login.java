@@ -1,5 +1,6 @@
 package com.lockgenius.passwordGenerator.Dto;
 
+
 public class login {
 
     private String username;
@@ -18,5 +19,3 @@ public class login {
         this.password = password;
     }
 }
-
-
